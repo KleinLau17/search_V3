@@ -1,0 +1,30 @@
+PUT channel_entity_v1
+{
+  "aliases": {
+    "channel_entity": {}
+  },
+  "mappings": {
+    "properties": {
+      "codeName": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "typeName": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "gmtCreate": {
+        "type": "date"
+      },
+      "gmtModify": {
+        "type": "date"
+      }
+    }
+  }
+}
+
+GET channel_entity_v1/_search
+
+DELETE /channel_entity_v1

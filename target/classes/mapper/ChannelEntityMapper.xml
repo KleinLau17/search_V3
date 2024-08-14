@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangxun.search.mapper.ChannelEntityMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangxun.search.model.entity.ChannelEntity">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="companyId" column="company_id" jdbcType="VARCHAR"/>
+            <result property="groupEntityCode" column="group_entity_code" jdbcType="VARCHAR"/>
+            <result property="entityCode" column="entity_code" jdbcType="VARCHAR"/>
+            <result property="codeName" column="code_name" jdbcType="VARCHAR"/>
+            <result property="entityType" column="entity_type" jdbcType="VARCHAR"/>
+            <result property="typeName" column="type_name" jdbcType="VARCHAR"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModify" column="gmt_modify" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,company_id,group_entity_code,
+        entity_code,code_name,entity_type,
+        type_name,gmt_create,gmt_modify
+    </sql>
+
+    <select id="listChannelEntity" resultType="com.shangxun.search.model.entity.ChannelEntity">
+        select *
+        from channel_entity
+        where gmt_Modify >= #{minGmtModify}
+    </select>
+</mapper>
