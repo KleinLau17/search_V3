@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://bj-cdb-chl0kfgo.sql.tencentcdb.com:29610/sphinx_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
     username: shangxun_dev
-    password: xxx
+    password: qFTJvKh4RB4FDPsT1Hr0
   # Elasticsearch 配置
   elasticsearch:
     uris: http://localhost:9200
